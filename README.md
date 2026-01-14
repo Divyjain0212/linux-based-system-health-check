@@ -1,75 +1,54 @@
-Automated System Health Monitoring and Reporting Script
+### Automated System Health Monitoring and Reporting Script
 1. Problem Overview (Clarified)
 
-System administrators face challenges such as:
-
-Difficulty detecting system issues before performance degrades
-
-Manual monitoring of CPU, memory, disk, and services is time-consuming
-
-Human error during checks
-
-Lack of timely alerts leads to unexpected downtime
+- System administrators face challenges such as:
+- Difficulty detecting system issues before performance degrades
+- Manual monitoring of CPU, memory, disk, and services is time-consuming
+- Human error during checks
+- Lack of timely alerts leads to unexpected downtime
 
 2. Proposed Solution
 
-An automated system health monitoring script that:
-
-Periodically checks critical system metrics
-
-Detects threshold breaches
-
-Generates a health report
-
-Sends the report automatically via email
-
-Enables proactive system maintenance
+- An automated system health monitoring script that:
+- Periodically checks critical system metrics
+- Detects threshold breaches
+- Generates a health report
+- Sends the report automatically via email
+- Enables proactive system maintenance
 
 3. Objectives of the Script
 
-Monitor CPU usage
-
-Monitor Memory usage
-
-Monitor Disk usage
-
-Check system uptime
-
-Check critical services status
-
-Send email alerts/report
-
-Run automatically using cron
+- Monitor CPU usage
+- Monitor Memory usage
+- Monitor Disk usage
+- Check system uptime
+- Check critical services status
+- Send email alerts/report
+- Run automatically using cron
 
 4. System Requirements
 
-Linux system (Ubuntu / Amazon Linux / RHEL)
-
-mail or sendmail configured
-
-Cron service enabled
+- Linux system (Ubuntu / Amazon Linux / RHEL)
+- mail or sendmail configured
+- Cron service enabled
 
 5. Tools & Technologies Used
-Component	    Purpose
-Bash	        Automation scripting
-Linux utilities	top, df, free, uptime
-Cron	        Scheduling
-Mail utility	Email reporting
+- Component	    Purpose
+- Bash	        Automation scripting
+- Linux utilities	top, df, free, uptime
+- Cron	        Scheduling
+- Mail utility	Email reporting
 
 6. Script Workflow
 
-Collect system metrics
-
-Format health report
-
-Check threshold limits
-
-Trigger email alert
-
-Log output (optional)
+- Collect system metrics
+- Format health report
+- Check threshold limits
+- Trigger email alert
+- Log output (optional)
 
 7. Automated System Health Monitoring Script (Bash)
-menu.sh:
+### menu.sh:
 ```bash
 #!/bin/bash
 LOG_FILE="/var/log/system_health.log"
@@ -180,36 +159,26 @@ Add:
 
 11. Advantages of the Solution
 
-Fully automated
-
-Reduces manual effort
-
-Prevents downtime
-
-Real-time alerts
-
-Scalable for multiple servers
+- Fully automated
+- Reduces manual effort
+- Prevents downtime
+- Real-time alerts
+- Scalable for multiple servers
 
 12. Limitations
 
-Requires mail service configuration
-
-Basic threshold-based monitoring
-
-No graphical dashboard
+- Requires mail service configuration
+- Basic threshold-based monitoring
+- No graphical dashboard
 
 13. Future Enhancements
 
-Integrate with Slack / Telegram
-
-Store logs in centralized monitoring system
-
-Add service-specific checks (Nginx, Docker, MySQL)
-
-Convert to Python for extensibility
-
-Push metrics to Prometheus / Grafana
+- Integrate with Slack / Telegram
+- Store logs in centralized monitoring system
+- Add service-specific checks (Nginx, Docker, MySQL)
+- Convert to Python for extensibility
+- Push metrics to Prometheus / Grafana
 
 14. Conclusion
 
-This automated system health monitoring and reporting script provides continuous visibility into system performance, reduces administrative overhead, and enables proactive issue resolution. It is a simple yet effective solution for maintaining system reliability.
+- This automated system health monitoring and reporting script provides continuous visibility into system performance, reduces administrative overhead, and enables proactive issue resolution. It is a simple yet effective solution for maintaining system reliability.
