@@ -47,8 +47,20 @@
 - Trigger email alert
 - Log output (optional)
 
-7. Automated System Health Monitoring Script (Bash)
-### menu.sh:
+7. Prerequisites
+Ensure your system meets the following requirements:
+- Linux (Ubuntu, CentOS, or any Unix-based system)
+- Bash Shell
+- mailx (for email functionality)
+- sudo access
+
+To install mailx, run:
+```bash
+sudo apt install mailutils  # Ubuntu/Debian
+```
+
+8. Automated System Health Monitoring Script (Bash)
+   ### menu.sh:
 ```bash
 #!/bin/bash
 LOG_FILE="/var/log/system_health.log"
@@ -135,19 +147,19 @@ done
 ```
 
 
-8. Make Script Executable
+9. Make Script Executable
 ```bash
 chmod +x menu.sh
 ```
 
-9. Run Script Manually (Testing)
+10. Run Script Manually (Testing)
 ```bash
 ./menu.sh
 ```
 
-10. Automate Using Cron Job
+11. Automate Using Cron Job
 
-Run every 30 minutes:
+    ### Run every 30 minutes:
 ```bash
 crontab -e
 ```
@@ -157,7 +169,7 @@ Add:
 */30 * * * * /path/to/menu.sh
 ```
 
-11. Advantages of the Solution
+12. Advantages of the Solution
 
 - Fully automated
 - Reduces manual effort
@@ -165,13 +177,13 @@ Add:
 - Real-time alerts
 - Scalable for multiple servers
 
-12. Limitations
+13. Limitations
 
 - Requires mail service configuration
 - Basic threshold-based monitoring
 - No graphical dashboard
 
-13. Future Enhancements
+14. Future Enhancements
 
 - Integrate with Slack / Telegram
 - Store logs in centralized monitoring system
@@ -179,6 +191,6 @@ Add:
 - Convert to Python for extensibility
 - Push metrics to Prometheus / Grafana
 
-14. Conclusion
+15. Conclusion
 
 - This automated system health monitoring and reporting script provides continuous visibility into system performance, reduces administrative overhead, and enables proactive issue resolution. It is a simple yet effective solution for maintaining system reliability.
